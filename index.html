@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather App</title>
+	<link rel="stylesheet" type="text/css" href="https://erikflowers.github.io/weather-icons/css/weather-icons.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="weather.css">
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js">
+	</script>
+	<script type="text/javascript" src="weather.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col" id="weather">
+				<div class="mx-auto text-center">
+					<h1><span id="temp"></span> <span>&deg;C</span>|<span id="optional-temp-unit">&deg;F</span></h1>
+					<p>in <span id="city"></span>, <span id="country"></span></p>
+					<p><span id="desc"></span></p>
+					<p><span id="showIcon"></span></p>
+					<i class="hidden wi wi-day-snow"></i>
+					<i class="hidden wi wi-day-sunny"></i>
+					<i class="hidden wi wi-day-rain"></i>
+					<i class="hidden wi wi-day-cloudy"></i>
+					<i class="hidden wi wi-day-windy"></i>
+					<i class="hidden wi wi-day-storm-showers"></i>
+					<i class="hidden wi wi-hot"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
