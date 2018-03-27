@@ -6,9 +6,6 @@ body {
 	margin-top: 15%;
 }
 
-.main-1 {
-	position: relative;
-}
 
 #temp {
 	font-size: 12rem;
@@ -16,4 +13,19 @@ body {
 
 #optional-temp-unit {
 	color: #a9a9a9;
+}
+
+.wi.hidden {
+	display: none;
+}
+
+.wi-day-clear:before {
+      content: "\f00d";
+}
+.wi-day-clouds:before {
+    content: "\f002";
+}
+
+i {
+	font-size: 10rem;
 }

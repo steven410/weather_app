@@ -1,7 +1,9 @@
 var api = "https://fcc-weather-api.glitch.me/api/current?";
 var lat, lon;
+
 $( document ).ready(function() {
-	if (navigator.geolocation) {
+ 
+if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position) {
 			var lat = "lat=" + position.coords.latitude;
 			var lon = "lon=" + position.coords.longitude;
@@ -9,30 +11,26 @@ $( document ).ready(function() {
 		});
 	} else alert("Geolocation is not supported by this browser.");
 	
-
 });
 
-
 function getWeather(lat, lon) {
-	var urlString = api + lat + "&" + lon;
+	//var urlString = api + lat + "&" + lon;
 	$.ajax({
-		url: urlString,
+		url: api + lat + "&" + lon,
 		success: function(result) {
-			$("#temp").text(result.main.temp);
+    
+      var desc = result.weather[0].main;
+			$("#temp").text(Math.round(result.main.temp));
 			$("#city").text(result.name);
 			$("#country").text(result.sys.country);
-			$("#desc").html(result.weather[0].main);
-			$("#showIcon").html(result.weather[0].icon);
+			$("#desc").text(desc);
+      		$('.wi-day-' + desc.toLowerCase()).removeClass('hidden');
 			}
 		});
 }
 
-// function iconCall(){
-// 	switch (){
-// 		case //var is equal to text(result.weather[0].id);
-// 		//remove hidden class from icon;
-// 		break;
-// 	}
+// function convert(){
+// 	result.main.temp * 9 / 5 + 32
 // }
 
 
