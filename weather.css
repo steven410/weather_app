@@ -26,11 +26,8 @@ body {
 	display: none;
 }
 
-.wi-day-clear:before {
+.wi:before {
       content: "\f00d";
-}
-.wi-day-clouds:before {
-    content: "\f002";
 }
 
 i {
